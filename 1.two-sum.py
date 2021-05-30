@@ -7,13 +7,13 @@
 # @lc code=start
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for el in nums:
-            el_index = nums.index(el)  # store index
-            unvisited = nums[:el_index] + nums[el_index + 1 :]  # unvisited list
-            nums[el_index] = "x"  # mark as visited
+        prevMap = {}  # val: idx
 
-            if target - el in unvisited:
-                return [el_index, nums.index(target - el)]
+        for idx, val in enumerate(nums):
+            diff = target - val
+            if diff in prevMap:
+                return [prevMap[diff], idx]
+            prevMap[val] = idx
 
 
 # @lc code=end

@@ -7,20 +7,20 @@
 # @lc code=start
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        # buy, sell - two pointer sol
-        l, r = 0, 1
-        maxP = 0
+        buy_price, sell_price = 0, 1
+        maxProfit = 0
 
-        while r < len(prices):
-            # profitable?
-            if prices[l] < prices[r]:
-                profit = prices[r] - prices[l]
-                maxP = max(maxP, profit)
+        while sell_price < len(prices):
+            # if profitable, check if max profit
+            if prices[sell_price] > prices[buy_price]:
+                profit = prices[sell_price] - prices[buy_price]
+                maxProfit = max(maxProfit, profit)
+            # else, new buy price as its cheaper
             else:
-                l = r
-            r += 1
-        
-        return maxP
+                buy_price = sell_price
+                
+            sell_price += 1
+        return maxProfit
 
 
 # @lc code=end
