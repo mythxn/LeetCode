@@ -4,6 +4,7 @@
 | arr          | find all numbers disappeared in an array | mark indices[val-1] in list as - // return pos[ind+1] of + nums                                                      |
 | arr, 2po     | two sum 2 - input arr is sorter          | two pointer // if sum < target, shift left else right                                                                |
 | arr, 2po     | 3sum                                     | sort arr; iterate a, if +1 ==, continue; 2sum on rest (2po)                                                          |
+| arr, 2po     | move zeroes                              | j = 0; if n not 0, nums[j] = n; j+=1; nums[j,end] = 0                                                                |
 | arr, sort    | merge intervals                          | sort intervals by start time; if i[start] <= i-1[end] - end=max(i[end],i-1[end]) else append // think of number line |
 | bp           | single number                            | for num, out ^= num // (a^a=0 // 0^a=a)                                                                              |
 | bp, arr      | missing number                           | exp sum - act sum // exp sum calc usin math formula                                                                  |
