@@ -23,3 +23,4 @@ map, arr                      | two sum                                         
 map, str                      | group anagrams                                          | map res; for word: map[char freq]; return map.values
 sort                          | valid anagram                                           | return sorted(a) == sorted(b)
 stack                         | valid parentheses                                       | append openings to stack; if not stack and matching closing- pop(); return True if not stack
+tree, bfs                     | maximum depth of binary tree                            | q = deque(), if root: q.append(root), while q: i = popleft, q.append(kids of i); depth += 1
