@@ -10,9 +10,7 @@ class Solution:
         balances = []
 
         for customer in accounts:
-            sum = 0
-            for bank_bal in customer:
-                sum += bank_bal
+            sum = sum(customer)
             balances.append(sum)
 
         return max(balances)

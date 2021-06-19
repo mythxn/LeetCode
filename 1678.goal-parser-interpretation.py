@@ -10,7 +10,7 @@ class Solution:
 
         legend = {"G": "G", "()": "o", "(al)": "al"}
 
-        for key in legend.keys():
+        for key in legend:
             command = command.replace(key, legend[key])
 
         return command

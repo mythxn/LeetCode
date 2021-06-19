@@ -10,7 +10,7 @@ class Solution:
         if num == 0:
             return "0"
 
-        neg = True if num < 0 else False
+        neg = num < 0
         out = ""
 
         while abs(num) > 0:
@@ -18,7 +18,7 @@ class Solution:
             out += str(rem)
             num = abs(num) // 7
 
-        if neg is False:
+        if not neg:
             return out[::-1]
         else:
             return "-" + out[::-1]

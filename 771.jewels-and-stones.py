@@ -7,11 +7,7 @@
 # @lc code=start
 class Solution:
     def numJewelsInStones(self, jewels: str, stones: str) -> int:
-        count = 0
-        for item in stones:
-            if item in jewels:
-                count += 1
-        return count
+        return sum(item in jewels for item in stones)
 
 
 # @lc code=end

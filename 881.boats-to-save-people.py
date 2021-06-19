@@ -19,14 +19,9 @@ class Solution:
             cur_tot = people[left] + people[right]
 
             if cur_tot <= limit:
-                num_of_boats += 1
                 left += 1
-                right -= 1
-
-            # too heavy, send them alone
-            elif cur_tot > limit:
-                num_of_boats += 1
-                right -= 1
+            num_of_boats += 1
+            right -= 1
 
         return num_of_boats
 

@@ -11,8 +11,7 @@ class Solution:
         curSum = 0
 
         for n in nums:
-            if curSum < 0:
-                curSum = 0
+            curSum = max(curSum, 0)
             curSum += n
             maxSub = max(curSum, maxSub)
 

@@ -14,10 +14,7 @@ class Solution:
 
     def str_to_sum(self, n: int) -> int:
         string = str(n)
-        sum = 0
-        for char in string:
-            sum += int(char)
-        return sum
+        return sum(int(char) for char in string)
 
 
 # @lc code=end
