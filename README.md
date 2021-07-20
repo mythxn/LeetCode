@@ -3,6 +3,7 @@ category                      | name                                            
 arr                           | product of array except self                            | two passes; one in order for prefixes, one in reverse for postfixes while computing products
 arr                           | find all numbers disappeared in an array                | mark indices[val-1] in list as - // return pos[ind+1] of + nums
 arr                           | valid mountain array                                    | 2 loops // first loop breaks at peak, perform checks; second from peak to end, perform checks
+arr                           | shuffle an array                                        | one liner arr shuffler - random.sample(arr,len(arr))
 arr, 2po                      | container with most water                               | while l < r: mA = max(mA,area); if r > l: shift l else r
 arr, 2po                      | two sum 2 - input arr is sorter                         | if sum < target, shift left else right
 arr, 2po                      | 3sum                                                    | sort arr; iterate a, if +1 ==, continue; 2sum on rest (2po)
