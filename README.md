@@ -20,6 +20,7 @@
  dp                            | range sum query - immutable                             | create a running total in const // diff bw runTot[right+1] and runTot[left] is the sum
  dp, arr                       | best time to buy and sell stock                         | slider prob - two pointer sol // iterate thru arr: l=min(l, i), r=max(profit,maxP)
  dp, d&c, arr                  | maximum subarray                                        | iterate thru arr; if l is -, reset curSum, curSum+=n; maxSub = max(l,curS)
+ ll                            | remove duplicates from sorted list                      | while cur.next and next val same; skip else move
  ll                            | remove linked list elements                             | handle if head.val is val; if cur.next = val ? cur.next.next : cur.next
  ll, 2po                       | palindrome linked list                                  | find the middle node,
  map, 2po, ll                  | linked list cycle                                       | fast_po = next.next, slow_po = next // if fast_po == slow_po; return True
