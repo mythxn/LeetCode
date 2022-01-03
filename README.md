@@ -29,7 +29,7 @@
  map, arr                      | two sum                                                 | one pass sol // map[val:idx]; if val in map; return [map[val], idx]; else map[val] = idx
  map, str                      | group anagrams                                          | map res; for word: map[char freq]; return map.values
  sort                          | valid anagram                                           | return sorted(a) == sorted(b)
- stack                         | valid parentheses                                       | append openings to stack; if not stack and matching closing- pop(); return True if not stack
+ stack                         | valid parentheses                                       | append closings of c in stack, if closing, check c == pop? return True if stack empty
  str, design, greedy           | push dominoes                                           | loop until all dominoes have fallen (step == dominoes); each step does one move of each [standing, left, right] using .replace
  tree, bfs                     | maximum depth of binary tree                            | q = deque(), if root: q.append(root), while q: i = popleft, q.append(kids of i); depth += 1
  tree, recursion               | binary tree pruning                                     | recurse every node, if not child & val = 0; remove by return None

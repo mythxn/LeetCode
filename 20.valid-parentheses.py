@@ -9,20 +9,19 @@
 
 class Solution:
     def isValid(self, s: str) -> bool:
+        brackets = {
+            "(": ")",
+            "[": "]",
+            "{": "}",
+        }
         stack = []
-        closeToOpen = {"]": "[", ")": "(", "}": "{"}
 
         for c in s:
-            if c in closeToOpen:
-                if stack and stack[-1] == closeToOpen[c]:
-                    stack.pop()
-                else:
-                    return False
-            else:
-                stack.append(c)
+            if c in brackets:
+                stack.append(brackets[c])
+            elif not stack or stack.pop() != c:
+                return False
 
-        if not stack:
-            return True
-
+        return not stack
 
 # @lc code=end
