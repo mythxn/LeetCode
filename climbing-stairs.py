@@ -1,23 +1,10 @@
 class Solution:
-    def climbStairs(self, n):
-        return self.counter(n, {})
+    def climbStairs(self, n: int) -> int:
+        one = two = 1
 
-    def counter(self, stairsRem, savedRes):
-        # if crossed last step
-        if stairsRem < 0:
-            return 0
+        for _ in (range(n - 1)):
+            temp = one
+            one = one + two
+            two = temp
 
-        # if at last step
-        if stairsRem == 0:
-            return 1
-
-        # memoization
-        if stairsRem in savedRes:
-            return savedRes[stairsRem]
-
-        # if at unknown stair
-        savedRes[stairsRem] = (
-                self.counter(stairsRem - 1, savedRes) +
-                self.counter(stairsRem - 2, savedRes))
-
-        return savedRes[stairsRem]
+        return one
