@@ -12,7 +12,8 @@ class Solution(object):
         """
         if root is None:
             return True
-        return abs(self.depth(root.left) - self.depth(root.right)) <= 1 and self.isBalanced(root.left) and self.isBalanced(root.right)
+        return abs(self.depth(root.left) - self.depth(root.right)) <= 1 and self.isBalanced(
+            root.left) and self.isBalanced(root.right)
 
     def depth(self, root):
         if root is None:

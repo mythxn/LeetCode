@@ -18,7 +18,6 @@ class Solution:
         """
         return random.sample(self.orig_conf, len(self.orig_conf))
 
-
 # Your Solution object will be instantiated and called as such:
 # obj = Solution(nums)
 # param_1 = obj.reset()

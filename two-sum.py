@@ -5,7 +5,7 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        mapping_dict = {} #val: idx
+        mapping_dict = {}  # val: idx
         for i, v in enumerate(nums):
             diff = target - v
             if diff in mapping_dict:

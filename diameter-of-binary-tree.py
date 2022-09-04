@@ -11,6 +11,7 @@ class Solution(object):
         :rtype: int
         """
         res = [0]
+
         def dfs(root):
             if root is None:
                 return 0
@@ -18,5 +19,6 @@ class Solution(object):
             right = dfs(root.right)
             res[0] = max(res[0], left + right)
             return 1 + max(left, right)
+
         dfs(root)
         return res[0]
