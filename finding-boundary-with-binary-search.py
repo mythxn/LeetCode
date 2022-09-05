@@ -1,14 +1,19 @@
 class Solution:
     def find_boundary(self, arr):
-        left, right = 0, len(arr) - 1
-        boundary_index = -1
-
-        while left <= right:
+        """
+        :type arr: List[int]
+        :rtype: int
+        """
+        if arr[0] == 0:
+            return 0
+        if arr[-1] == 1:
+            return len(arr)
+        left = 0
+        right = len(arr) - 1
+        while left < right:
             mid = (left + right) // 2
-            if arr[mid]:
-                boundary_index = mid
-                right = mid - 1
-            else:
+            if arr[mid] == 0:
                 left = mid + 1
-
-        return boundary_index
+            else:
+                right = mid
+        return left

@@ -1,3 +1,8 @@
-class Solution:
-    def numJewelsInStones(self, jewels: str, stones: str) -> int:
-        return sum(item in jewels for item in stones)
+class Solution(object):
+    def numJewelsInStones(self, jewels, stones):
+        """
+        :type jewels: str
+        :type stones: str
+        :rtype: int
+        """
+        return len([x for x in stones if x in jewels])

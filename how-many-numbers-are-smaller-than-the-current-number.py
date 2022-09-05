@@ -1,14 +1,7 @@
-class Solution:
+class Solution(object):
     def smallerNumbersThanCurrent(self, nums):
-        sorted_nums = sorted(nums)
-        dict = {}
-        result = []
-
-        for i in range(len(sorted_nums)):
-            if sorted_nums[i] not in dict:
-                dict[sorted_nums[i]] = i
-
-        for i in range(len(nums)):
-            result.append(dict[nums[i]])
-
-        return result
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        return [len([x for x in nums if x < num]) for num in nums]

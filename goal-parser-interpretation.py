@@ -1,8 +1,7 @@
-class Solution:
-    def interpret(self, command: str) -> str:
-        legend = {"G": "G", "()": "o", "(al)": "al"}
-
-        for key in legend:
-            command = command.replace(key, legend[key])
-
-        return command
+class Solution(object):
+    def interpret(self, command):
+        """
+        :type command: str
+        :rtype: str
+        """
+        return command.replace('()', 'o').replace('(al)', 'al')

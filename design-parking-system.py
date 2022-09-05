@@ -1,14 +1,16 @@
 class ParkingSystem:
-    def __init__(self, big: int, medium: int, small: int):
-        self.spots = {}
+    def __init__(self, big, medium, small):
+        """
+        :type big: int
+        :type medium: int
+        :type small: int
+        """
+        self.spots = [big, medium, small]
 
-        self.spots[1] = big
-        self.spots[2] = medium
-        self.spots[3] = small
-
-    def addCar(self, carType: int) -> bool:
-        if self.spots[carType] > 0:
-            self.spots[carType] -= 1
-            return True
-        else:
-            return False
+    def addCar(self, carType):
+        """
+        :type carType: int
+        :rtype: bool
+        """
+        self.spots[carType - 1] -= 1
+        return self.spots[carType - 1] >= 0

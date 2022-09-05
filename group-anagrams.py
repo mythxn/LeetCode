@@ -1,7 +1,14 @@
-class Solution:
+class Solution(object):
     def groupAnagrams(self, strs):
-        d = {}
-        for w in sorted(strs):
-            key = tuple(sorted(w))
-            d[key] = d.get(key, []) + [w]
-        return list(d.values())
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+        anagrams = {}
+        for word in strs:
+            sorted_word = ''.join(sorted(word))
+            if sorted_word not in anagrams:
+                anagrams[sorted_word] = [word]
+            else:
+                anagrams[sorted_word].append(word)
+        return list(anagrams.values())

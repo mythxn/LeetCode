@@ -1,4 +1,8 @@
-class Solution:
+class Solution(object):
     def isIsomorphic(self, s, t):
-        len_set = set(zip(s, t))
-        return len(len_set) == len(set(s)) == len(set(t))
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        return len(set(zip(s, t))) == len(set(s)) == len(set(t))

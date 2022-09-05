@@ -1,17 +1,18 @@
-class Solution:
-    def convertToBase7(self, num: int) -> str:
+class Solution(object):
+    def convertToBase7(self, num):
+        """
+        :type num: int
+        :rtype: str
+        """
+        return self.any_number_to_any_base(num, 7)
+
+    def any_number_to_any_base(self, num, base):
         if num == 0:
             return "0"
-
         neg = num < 0
         out = ""
-
         while abs(num) > 0:
-            rem = abs(num) % 7
+            rem = abs(num) % base
             out += str(rem)
-            num = abs(num) // 7
-
-        if not neg:
-            return out[::-1]
-        else:
-            return "-" + out[::-1]
+            num = abs(num) // base
+        return f"-{out[::-1]}" if neg else out[::-1]

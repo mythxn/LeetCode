@@ -1,7 +1,7 @@
-class Solution:
-    def maximum69Number(self, num):
-        sanitized_num = list(str(num))
-        for i, val in enumerate(sanitized_num):
-            if val != '9':
-                sanitized_num[i] = '9'
-        return ''.join(sanitized_num)
+class Solution(object):
+    def maximum69Number (self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        return int(str(num).replace('6', '9', 1))
